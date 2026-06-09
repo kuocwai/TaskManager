@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi" spellcheck="false">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Bảng Phân Công Nhiệm Vụ
+    </title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>
+            BẢNG PHÂN CÔNG NHIỆM VỤ
+        </h1>
+
+    </div>
+
+    <div class="tab-container">
+
+        <button class="tab active"
+            data-file="master-task">
+            Nhiệm vụ tổng
+        </button>
+
+        <button class="tab"
+            data-file="khoa">
+            Khoa
+        </button>
+
+        <button class="tab"
+            data-file="thai">
+            Thái
+        </button>
+
+        <button class="tab"
+            data-file="nhannghia">
+            Nhân Nghĩa
+        </button>
+
+        <button class="tab"
+            data-file="trong">
+            Trọng
+        </button>
+
+        <button class="tab"
+            data-file="doannghia">
+            Đoàn Nghĩa
+        </button>
+
+        <button class="tab"
+            id="reportTab">
+            Báo cáo
+        </button>
+
+        <button class="tab"
+            id="progressTab">
+            Tiến độ hiện tại
+        </button>
+
+    </div>
+
+    <div class="toolbar">
+
+        <button id="addTaskBtn">
+            THÊM TASK
+        </button>
+
+        <button id="refreshBtn">
+            LÀM MỚI
+        </button>
+
+        <button id="syncBtn">
+            ĐỒNG BỘ GITHUB
+        </button>
+
+    </div>
+
+    <div id="contentArea">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Tên Task</th>
+
+                    <th>Nội dung</th>
+
+                    <th>Deadline</th>
+
+                    <th>Tiến độ</th>
+
+                    <th>Ghi chú</th>
+
+                    <th>Trạng thái</th>
+
+                    <th>Hành động</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="taskTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div id="taskModal"
+        class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>
+                Thêm Task
+            </h2>
+
+            <input
+                id="taskName"
+                placeholder="Tên Task">
+
+            <textarea
+                id="description"
+                placeholder="Nội dung nhiệm vụ"></textarea>
+
+            <input
+                id="deadline"
+                type="date">
+
+            <input
+                id="progress"
+                type="number"
+                min="0"
+                max="100"
+                placeholder="Tiến độ hoàn thành (%)">
+
+            <textarea
+                id="note"
+                placeholder="Ghi chú"></textarea>
+
+            <select
+                id="status">
+
+                <option>
+                    Pending
+                </option>
+
+                <option>
+                    In Progress
+                </option>
+
+                <option>
+                    Done
+                </option>
+
+            </select>
+
+            <button
+                id="saveTask">
+
+                LƯU
+            </button>
+
+            <button
+                id="closeModal">
+
+                ĐÓNG
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
