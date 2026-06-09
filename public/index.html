@@ -5,15 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         Bảng Phân Công Nhiệm Vụ
     </title>
 
-    <link rel="stylesheet"
-        href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -29,45 +27,64 @@
 
     <div class="tab-container">
 
-        <button class="tab active"
-            data-file="master-task">
+        <button class="tab active" data-file="master-task">
             Nhiệm vụ tổng
         </button>
 
-        <button class="tab"
-            data-file="khoa">
+        <button class="tab" data-file="khoa">
             Khoa
         </button>
 
-        <button class="tab"
-            data-file="thai">
+        <button class="tab" data-file="thai">
             Thái
         </button>
 
-        <button class="tab"
-            data-file="nhannghia">
+        <button class="tab" data-file="nhannghia">
             Nhân Nghĩa
         </button>
 
-        <button class="tab"
-            data-file="trong">
+        <button class="tab" data-file="trong">
             Trọng
         </button>
 
-        <button class="tab"
-            data-file="doannghia">
+        <button class="tab" data-file="doannghia">
             Đoàn Nghĩa
         </button>
 
-        <button class="tab"
-            id="reportTab">
+        <button class="tab" id="reportTab">
             Báo cáo
         </button>
 
-        <button class="tab"
-            id="progressTab">
+        <button class="tab" id="progressTab">
             Tiến độ hiện tại
         </button>
+
+        <button class="tab" id="logTab">
+            Nhật ký hoạt động
+        </button>
+
+    </div>
+    <div class="dashboard">
+
+        <div class="card">
+            <span id="totalTasks">0</span>
+            <p>Tổng Task</p>
+        </div>
+
+        <div class="card">
+            <span id="doneTasks">0</span>
+            <p>Done</p>
+        </div>
+
+        <div class="card">
+            <span id="doingTasks">0</span>
+            <p>In Progress</p>
+        </div>
+
+        <div class="card">
+            <span id="pendingTasks">0</span>
+            <p>Pending</p>
+        </div>
 
     </div>
 
@@ -89,40 +106,80 @@
 
     <div id="contentArea">
 
-        <table>
+        <div id="taskSection">
 
-            <thead>
+            <table>
 
-                <tr>
+                <thead>
+                    <tr>
+                        <th>Tên Task</th>
+                        <th>Nội dung</th>
+                        <th>Deadline</th>
+                        <th>Tiến độ</th>
+                        <th>Ghi chú</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
 
-                    <th>Tên Task</th>
+                <tbody id="taskTable">
+                </tbody>
 
-                    <th>Nội dung</th>
+            </table>
 
-                    <th>Deadline</th>
+        </div>
 
-                    <th>Tiến độ</th>
+        <div id="reportSection" class="hidden">
 
-                    <th>Ghi chú</th>
+            <h2>Báo cáo công việc</h2>
 
-                    <th>Trạng thái</th>
+            <div class="report-form">
 
-                    <th>Hành động</th>
+                <input id="reportUser" placeholder="Người gửi">
 
-                </tr>
+                <textarea id="reportContent" placeholder="Nội dung báo cáo"></textarea>
 
-            </thead>
+                <button id="submitReport">
 
-            <tbody id="taskTable">
+                    Gửi báo cáo
 
-            </tbody>
+                </button>
 
-        </table>
+            </div>
+
+            <div id="reportList">
+
+            </div>
+
+        </div>
+
+        <div id="progressSection" class="hidden">
+
+            <h2>
+                Tiến độ hiện tại
+            </h2>
+
+            <div id="progressContainer">
+
+            </div>
+
+        </div>
+
+        <div id="logSection" class="hidden">
+
+            <h2>
+                Nhật ký hoạt động
+            </h2>
+
+            <div id="activityLog">
+
+            </div>
+
+        </div>
 
     </div>
 
-    <div id="taskModal"
-        class="modal hidden">
+    <div id="taskModal" class="modal hidden">
 
         <div class="modal-content">
 
@@ -130,31 +187,17 @@
                 Thêm Task
             </h2>
 
-            <input
-                id="taskName"
-                placeholder="Tên Task">
+            <input id="taskName" placeholder="Tên Task">
 
-            <textarea
-                id="description"
-                placeholder="Nội dung nhiệm vụ"></textarea>
+            <textarea id="description" placeholder="Nội dung nhiệm vụ"></textarea>
 
-            <input
-                id="deadline"
-                type="date">
+            <input id="deadline" type="date">
 
-            <input
-                id="progress"
-                type="number"
-                min="0"
-                max="100"
-                placeholder="Tiến độ hoàn thành (%)">
+            <input id="progress" type="number" min="0" max="100" placeholder="Tiến độ hoàn thành (%)">
 
-            <textarea
-                id="note"
-                placeholder="Ghi chú"></textarea>
+            <textarea id="note" placeholder="Ghi chú"></textarea>
 
-            <select
-                id="status">
+            <select id="status">
 
                 <option>
                     Pending
@@ -170,15 +213,59 @@
 
             </select>
 
-            <button
-                id="saveTask">
+            <button id="saveTask">
 
                 LƯU
             </button>
 
-            <button
-                id="closeModal">
+            <button id="closeModal">
 
+                ĐÓNG
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="editModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>
+                Chỉnh sửa Task
+            </h2>
+
+            <input id="editTaskName" placeholder="Tên Task">
+
+            <textarea id="editDescription" placeholder="Nội dung"></textarea>
+
+            <input id="editDeadline" type="date">
+
+            <input id="editProgress" type="number" min="0" max="100" placeholder="Tiến độ">
+
+            <textarea id="editNote" placeholder="Ghi chú"></textarea>
+
+            <select id="editStatus">
+
+                <option>
+                    Pending
+                </option>
+
+                <option>
+                    In Progress
+                </option>
+
+                <option>
+                    Done
+                </option>
+
+            </select>
+
+            <button id="updateTaskBtn">
+                CẬP NHẬT
+            </button>
+
+            <button id="closeEditModal">
                 ĐÓNG
             </button>
 

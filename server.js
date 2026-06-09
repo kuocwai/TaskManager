@@ -8,6 +8,8 @@ const PORT = 3000;
 const { exec } =
     require("child_process");
 
+
+
 app.use(express.json({ limit: "10mb" }));
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -455,6 +457,47 @@ app.get(
             readJson(
                 "activity-log"
             )
+        );
+    }
+);
+
+/*
+====================
+GITHUB SYNC
+====================
+*/
+
+app.post(
+    "/api/sync",
+    (req,res)=>{
+
+        exec(
+
+            'git add . && git commit -m "Auto Sync" && git push origin main',
+
+            {
+                cwd: __dirname
+            },
+
+            (error,stdout,stderr)=>{
+
+                if(error){
+
+                    return res.json({
+
+                        success:false,
+
+                        error:error.message
+                    });
+                }
+
+                res.json({
+
+                    success:true,
+
+                    output:stdout
+                });
+            }
         );
     }
 );
