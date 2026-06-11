@@ -129,7 +129,11 @@ async function loadTasks() {
 
             <td>${task.taskName}</td>
 
-            <td>${task.description}</td>
+<td>
+    ${task.assignee || "-"}
+</td>
+
+<td>${task.description}</td>
 
             <td>
 
@@ -718,92 +722,158 @@ setInterval(() => {
 }, 30000);
 
 document
-.getElementById(
-    "updateTaskBtn"
-)
-.onclick =
-async ()=>{
+    .getElementById(
+        "updateTaskBtn"
+    )
+    .onclick =
+    async () => {
 
-    const progress =
-        Number(
-            document
-            .getElementById(
-                "editProgress"
-            )
-            .value
+        const progress =
+            Number(
+                document
+                    .getElementById(
+                        "editProgress"
+                    )
+                    .value
+            );
+
+        if (
+            progress < 0 ||
+            progress > 100
+        ) {
+
+            alert(
+                "Tiến độ phải từ 0 đến 100%"
+            );
+
+            return;
+        }
+
+        await fetch(
+
+            `/api/tasks/${currentFile}/${currentEditId}`,
+
+            {
+
+                method: "PUT",
+
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                },
+
+                body: JSON.stringify({
+
+                    taskName:
+                        document
+                            .getElementById(
+                                "editTaskName"
+                            )
+                            .value,
+
+                    description:
+                        document
+                            .getElementById(
+                                "editDescription"
+                            )
+                            .value,
+
+                    deadline:
+                        document
+                            .getElementById(
+                                "editDeadline"
+                            )
+                            .value,
+
+                    progress,
+
+                    note:
+                        document
+                            .getElementById(
+                                "editNote"
+                            )
+                            .value,
+
+                    status:
+                        document
+                            .getElementById(
+                                "editStatus"
+                            )
+                            .value
+                })
+            }
         );
 
-    if(
-        progress < 0 ||
-        progress > 100
-    ){
+        editModal
+            .classList.add(
+                "hidden"
+            );
 
-        alert(
-            "Tiến độ phải từ 0 đến 100%"
-        );
+        loadTasks();
+    };
 
-        return;
-    }
+document
+    .getElementById("importBtn")
+    .onclick = () => {
 
-    await fetch(
+        document
+            .getElementById("jsonFile")
+            .click();
+    };
 
-        `/api/tasks/${currentFile}/${currentEditId}`,
+document
+    .getElementById("jsonFile")
+    .addEventListener(
+        "change",
+        async (event) => {
 
-        {
+            const file =
+                event.target.files[0];
 
-            method:"PUT",
+            if (!file) {
+                return;
+            }
 
-            headers:{
-                "Content-Type":
-                "application/json"
-            },
+            const text =
+                await file.text();
 
-            body:JSON.stringify({
+            const json =
+                JSON.parse(text);
 
-                taskName:
-                document
-                .getElementById(
-                    "editTaskName"
-                )
-                .value,
+            const response =
+                await fetch(
+                    "/api/import",
+                    {
+                        method: "POST",
 
-                description:
-                document
-                .getElementById(
-                    "editDescription"
-                )
-                .value,
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
 
-                deadline:
-                document
-                .getElementById(
-                    "editDeadline"
-                )
-                .value,
+                        body:
+                            JSON.stringify(json)
+                    }
+                );
 
-                progress,
+            const result =
+                await response.json();
 
-                note:
-                document
-                .getElementById(
-                    "editNote"
-                )
-                .value,
+            if (result.success) {
 
-                status:
-                document
-                .getElementById(
-                    "editStatus"
-                )
-                .value
-            })
+                alert(
+                    "Import thành công"
+                );
+
+                loadTasks();
+            }
+            else {
+
+                alert(
+                    "Import thất bại"
+                );
+            }
+
+            event.target.value = "";
         }
     );
-
-    editModal
-    .classList.add(
-        "hidden"
-    );
-
-    loadTasks();
-};

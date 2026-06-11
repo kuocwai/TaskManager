@@ -102,6 +102,12 @@
             ĐỒNG BỘ GITHUB
         </button>
 
+        <button id="importBtn">
+            IMPORT JSON
+        </button>
+
+        <input type="file" id="jsonFile" accept=".json" hidden>
+
     </div>
 
     <div id="contentArea">
@@ -113,6 +119,7 @@
                 <thead>
                     <tr>
                         <th>Tên Task</th>
+                        <th>Người thực hiện</th>
                         <th>Nội dung</th>
                         <th>Deadline</th>
                         <th>Tiến độ</th>
@@ -186,6 +193,34 @@
             <h2>
                 Thêm Task
             </h2>
+
+            <select id="assignee">
+
+                <option value="">
+                    Chọn người thực hiện
+                </option>
+
+                <option value="khoa">
+                    Khoa
+                </option>
+
+                <option value="thai">
+                    Thái
+                </option>
+
+                <option value="nhannghia">
+                    Nhân Nghĩa
+                </option>
+
+                <option value="trong">
+                    Trọng
+                </option>
+
+                <option value="doannghia">
+                    Đoàn Nghĩa
+                </option>
+
+            </select>
 
             <input id="taskName" placeholder="Tên Task">
 

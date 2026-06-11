@@ -1,3 +1,44 @@
 {
-    "tasks": []
+    "tasks": [
+        {
+            "taskName": "Triển khai hạ tầng và xử lý nợ kỹ thuật lõi",
+            "description": "Bật mã hóa TLS/SSL toàn bộ đường truyền, xử lý lỗi nmap dropped packet, cài Juice Shop + WAF ModSecurity, cấu hình forward log API OpenStack và cài đặt môi trường VM cho TheHive, MISP, Cortex.",
+            "deadline": "2026-06-14",
+            "progress": 0,
+            "note": "Nhiệm vụ tổng Tuần 1 - Tập trung toàn lực vào việc dọn sạch backlog cũ và dựng hạ tầng thô cho Web, Cloud và SOC điều phối.",
+            "status": "Pending",
+            "id": 1781101869384,
+            "createdAt": "2026-06-10T14:31:00.097Z"
+        },
+        {
+            "taskName": "Xây dựng lõi SOAR & Tích hợp Threat Intelligence dữ liệu",
+            "description": "Phát triển các script kết nối Wazuh->TheHive, MISP->CDB Lists, cấu hình kết nối API Cortex <-> TheHive Analyzer. Lập trình backend Telegram Inline Keyboard tương tác Approve/Reject. Thiết kế biểu mẫu Ticket và Dashboard Vega/Canvas nâng cao.",
+            "deadline": "2026-06-21",
+            "progress": 0,
+            "note": "Nhiệm vụ tổng Tuần 2 - Kết nối toàn bộ các thành phần hạ tầng riêng lẻ thành một chuỗi pipeline dữ liệu SOC thống nhất.",
+            "status": "Pending",
+            "id": 1781101867758,
+            "createdAt": "2026-06-10T14:31:00.097Z"
+        },
+        {
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "description": "Thực hiện Decoder coverage audit, viết Custom Decoder/Rule bắt 4 nhóm lỗi OWASP Web và API OpenStack Control Plane. Phát triển OpenStack SOAR script cô lập Security Group. Cào trích xuất log bình thường ra định dạng CSV/JSON làm baseline cho ML.",
+            "deadline": "28/06/2026",
+            "progress": 0,
+            "note": "Nhiệm vụ tổng Tuần 3 - Đổ chất xám phân tích vào hệ thống SIEM/SOAR để nhận diện chính xác các kịch bản tấn công phức tạp.",
+            "status": "Pending",
+            "id": 1781101862969,
+            "createdAt": "2026-06-10T14:31:00.097Z"
+        },
+        {
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "description": "Viết luật Lateral Movement, giả lập tấn công đa hướng trên máy Kali để kiểm thử luồng tự động. Đo lường metric độ trễ phản ứng. R&D Prompt Engineering cho AI TN5+TN6. Đóng gói toàn bộ source code lên GitHub và kết xuất báo cáo.",
+            "deadline": "08/07/2026",
+            "progress": 0,
+            "note": "Nhiệm vụ tổng Tuần 4 - Nghiệm thu thực tế tính lì đòn của hệ thống dưới kịch bản bắn phá và chuẩn hóa tài liệu minh chứng.",
+            "status": "Pending",
+            "id": 1781101865817,
+            "createdAt": "2026-06-10T14:31:00.097Z"
+        }
+    ]
 }

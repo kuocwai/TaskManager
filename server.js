@@ -13,37 +13,6 @@ const { exec } =
 app.use(express.json({ limit: "10mb" }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.post(
-    "/api/sync",
-    (req,res)=>{
-
-        exec(
-            'git add . && git commit -m "Auto Sync" && git push',
-            (err,stdout,stderr)=>{
-
-                if(err){
-
-                    return res.json({
-
-                        success:false,
-
-                        error:
-                            stderr
-                    });
-                }
-
-                res.json({
-
-                    success:true,
-
-                    output:
-                        stdout
-                });
-            }
-        );
-    }
-);
-
 const DATA_DIR =
     path.join(__dirname, "data");
 
@@ -238,7 +207,7 @@ app.put(
             return res
                 .status(404)
                 .json({
-                    success:false
+                    success: false
                 });
         }
 
@@ -271,7 +240,7 @@ app.put(
         );
 
         res.json({
-            success:true
+            success: true
         });
     }
 );
@@ -319,7 +288,7 @@ app.delete(
         );
 
         res.json({
-            success:true
+            success: true
         });
     }
 );
@@ -332,7 +301,7 @@ REPORTS
 
 app.get(
     "/api/reports",
-    (req,res)=>{
+    (req, res) => {
 
         res.json(
             readJson(
@@ -344,30 +313,30 @@ app.get(
 
 app.post(
     "/api/reports",
-    (req,res)=>{
+    (req, res) => {
 
         const reports =
             readJson(
                 "reports"
             );
 
-        if(
+        if (
             !reports.reports
-        ){
-            reports.reports=[];
+        ) {
+            reports.reports = [];
         }
 
         reports.reports.unshift({
 
-            id:Date.now(),
+            id: Date.now(),
 
             ...req.body,
 
             createdAt:
                 new Date()
-                .toLocaleString(
-                    "vi-VN"
-                )
+                    .toLocaleString(
+                        "vi-VN"
+                    )
         });
 
         writeJson(
@@ -376,7 +345,7 @@ app.post(
         );
 
         res.json({
-            success:true
+            success: true
         });
     }
 );
@@ -389,55 +358,55 @@ PROGRESS
 
 app.get(
     "/api/progress",
-    (req,res)=>{
+    (req, res) => {
 
-        const result=[];
+        const result = [];
 
         USERS
-        .filter(
-            u =>
-            u !==
-            "master-task"
-        )
-        .forEach(user=>{
+            .filter(
+                u =>
+                    u !==
+                    "master-task"
+            )
+            .forEach(user => {
 
-            const data=
-                readJson(
-                    user
-                );
+                const data =
+                    readJson(
+                        user
+                    );
 
-            if(
-                data.tasks.length===0
-            ){
+                if (
+                    data.tasks.length === 0
+                ) {
+
+                    result.push({
+                        user,
+                        progress: 0
+                    });
+
+                    return;
+                }
+
+                const avg =
+
+                    data.tasks.reduce(
+                        (a, b) =>
+                            a + b.progress,
+                        0
+                    ) /
+
+                    data.tasks.length;
 
                 result.push({
+
                     user,
-                    progress:0
+
+                    progress:
+                        Math.round(
+                            avg
+                        )
                 });
-
-                return;
-            }
-
-            const avg=
-
-                data.tasks.reduce(
-                    (a,b)=>
-                    a+b.progress,
-                    0
-                )/
-
-                data.tasks.length;
-
-            result.push({
-
-                user,
-
-                progress:
-                    Math.round(
-                        avg
-                    )
             });
-        });
 
         res.json(result);
     }
@@ -451,7 +420,7 @@ LOGS
 
 app.get(
     "/api/logs",
-    (req,res)=>{
+    (req, res) => {
 
         res.json(
             readJson(
@@ -469,7 +438,7 @@ GITHUB SYNC
 
 app.post(
     "/api/sync",
-    (req,res)=>{
+    (req, res) => {
 
         exec(
 
@@ -479,35 +448,107 @@ app.post(
                 cwd: __dirname
             },
 
-            (error,stdout,stderr)=>{
+            (error, stdout, stderr) => {
 
-                if(error){
+                if (error) {
 
                     return res.json({
 
-                        success:false,
+                        success: false,
 
-                        error:error.message
+                        error: error.message
                     });
                 }
 
                 res.json({
 
-                    success:true,
+                    success: true,
 
-                    output:stdout
+                    output: stdout
                 });
             }
         );
     }
 );
 
+/*
+====================
+IMPORT JSON
+====================
+*/
+
+app.post(
+    "/api/import",
+    (req, res) => {
+
+        const importData =
+            req.body;
+
+        if (
+            !Array.isArray(importData)
+        ) {
+
+            return res.json({
+                success: false
+            });
+        }
+
+        let imported = 0;
+
+        importData.forEach(group => {
+
+            const target =
+                group.target;
+
+            const data =
+                readJson(target);
+
+            (group.tasks || [])
+            .forEach(task => {
+
+                task.id =
+                    Date.now() +
+                    Math.floor(
+                        Math.random() * 10000
+                    );
+
+                task.createdAt =
+                    new Date()
+                    .toISOString();
+
+                data.tasks.push(task);
+
+                imported++;
+            });
+
+            writeJson(
+                target,
+                data
+            );
+        });
+
+        addLog(
+            "SYSTEM",
+            "IMPORT JSON",
+            `${imported} task`
+        );
+
+        res.json({
+
+            success: true,
+
+            imported
+        });
+    }
+);
+
 app.listen(
     PORT,
-    ()=>{
+    "0.0.0.0",
+    () => {
 
         console.log(
-            `Server running at http://localhost:${PORT}`
+            `Server running on port ${PORT}`
         );
     }
 );
