@@ -571,137 +571,95 @@ app.get(
     "/api/export/excel",
     async (req, res) => {
 
-        const data =
-            readJson(currentFile || "master-task");
-
         const workbook =
             new ExcelJS.Workbook();
 
-        const sheet =
-            workbook.addWorksheet(
-                "Tasks"
-            );
+        USERS.forEach(user => {
 
-        sheet.columns = [
+            const data =
+                readJson(user);
 
-            {
-                header: "Tên Task",
-                key: "taskName",
-                width: 35
-            },
+            const sheetNames = {
 
-            {
-                header: "Người thực hiện",
-                key: "assignee",
-                width: 20
-            },
+                "master-task":
+                    "MASTER TASK",
 
-            {
-                header: "Nội dung",
-                key: "description",
-                width: 60
-            },
+                "khoa":
+                    "KHOA",
 
-            {
-                header: "Deadline",
-                key: "deadline",
-                width: 15
-            },
+                "thai":
+                    "THAI",
 
-            {
-                header: "Tiến độ",
-                key: "progress",
-                width: 15
-            },
+                "nhannghia":
+                    "NHAN NGHIA",
 
-            {
-                header: "Ghi chú",
-                key: "note",
-                width: 40
-            },
+                "trong":
+                    "TRONG",
 
-            {
-                header: "Trạng thái",
-                key: "status",
-                width: 18
-            }
-        ];
-        sheet.getRow(1).eachCell(cell => {
+                "doannghia":
+                    "DOAN NGHIA"
+            };
 
-            cell.font = {
-                bold: true,
-                color: {
-                    argb: "FFFFFFFF"
+            const sheet =
+                workbook.addWorksheet(
+                    sheetNames[user]
+                );
+
+            sheet.columns = [
+
+                {
+                    header: "Tên Task",
+                    key: "taskName",
+                    width: 35
+                },
+
+                {
+                    header: "Người thực hiện",
+                    key: "assignee",
+                    width: 20
+                },
+
+                {
+                    header: "Nội dung",
+                    key: "description",
+                    width: 60
+                },
+
+                {
+                    header: "Deadline",
+                    key: "deadline",
+                    width: 15
+                },
+
+                {
+                    header: "Tiến độ",
+                    key: "progress",
+                    width: 15
+                },
+
+                {
+                    header: "Ghi chú",
+                    key: "note",
+                    width: 40
+                },
+
+                {
+                    header: "Trạng thái",
+                    key: "status",
+                    width: 18
                 }
-            };
+            ];
 
-            cell.fill = {
-                type: "pattern",
-                pattern: "solid",
-                fgColor: {
-                    argb: "FFD32F2F"
-                }
-            };
+            sheet.getRow(1).eachCell(cell => {
 
-            cell.alignment = {
-                horizontal: "center",
-                vertical: "middle"
-            };
-        });
+                cell.font = {
 
-        const deadlineMap = {};
+                    bold: true,
 
-        let colorIndex = 0;
-
-        data.tasks.forEach(task => {
-
-            if (
-                !deadlineMap[
-                task.deadline
-                ]
-            ) {
-
-                deadlineMap[
-                    task.deadline
-                ] =
-                    colorIndex % 2 === 0
-                        ? "FFCFE2F3"
-                        : "FFEFEFEF";
-
-                colorIndex++;
-            }
-
-            const row =
-                sheet.addRow({
-
-                    taskName:
-                        task.taskName,
-
-                    assignee:
-                        task.assignee || "-",
-
-                    description:
-                        task.description,
-
-                    deadline:
-                        task.deadline,
-
-                    progress:
-                        `${task.progress}%`,
-
-                    note:
-                        task.note,
-
-                    status:
-                        task.status
-                });
-
-            const rowColor =
-                deadlineMap[
-                task.deadline
-                ];
-
-            row.eachCell(cell => {
+                    color: {
+                        argb: "FFFFFFFF"
+                    }
+                };
 
                 cell.fill = {
 
@@ -710,54 +668,127 @@ app.get(
                     pattern: "solid",
 
                     fgColor: {
-                        argb: rowColor
-                    }
-                };
-
-                cell.border = {
-
-                    top: {
-                        style: "thin"
-                    },
-
-                    left: {
-                        style: "thin"
-                    },
-
-                    bottom: {
-                        style: "thin"
-                    },
-
-                    right: {
-                        style: "thin"
+                        argb: "FFD32F2F"
                     }
                 };
 
                 cell.alignment = {
 
-                    vertical:
-                        "middle",
+                    horizontal: "center",
 
-                    wrapText:
-                        true
+                    vertical: "middle"
                 };
             });
+
+            let colorIndex = 0;
+
+            let currentDeadline = null;
+
+            data.tasks.forEach(task => {
+
+                if (
+                    task.deadline !== currentDeadline
+                ) {
+
+                    currentDeadline =
+                        task.deadline;
+
+                    colorIndex++;
+                }
+
+                const rowColor =
+
+                    colorIndex % 2 === 0
+
+                        ? "FFCFE2F3"
+
+                        : "FFEFEFEF";
+
+                const row =
+                    sheet.addRow({
+
+                        taskName:
+                            task.taskName,
+
+                        assignee:
+                            task.assignee || "",
+
+                        description:
+                            task.description,
+
+                        deadline:
+                            task.deadline,
+
+                        progress:
+                            `${task.progress}%`,
+
+                        note:
+                            task.note,
+
+                        status:
+                            task.status
+                    });
+
+                row.eachCell(cell => {
+
+                    cell.fill = {
+
+                        type: "pattern",
+
+                        pattern: "solid",
+
+                        fgColor: {
+                            argb:
+                                rowColor
+                        }
+                    };
+
+                    cell.border = {
+
+                        top: {
+                            style: "thin"
+                        },
+
+                        left: {
+                            style: "thin"
+                        },
+
+                        bottom: {
+                            style: "thin"
+                        },
+
+                        right: {
+                            style: "thin"
+                        }
+                    };
+
+                    cell.alignment = {
+
+                        vertical:
+                            "middle",
+
+                        wrapText:
+                            true
+                    };
+                });
+            });
+
+            sheet.autoFilter = {
+
+                from: "A1",
+
+                to: "G1"
+            };
+
+            sheet.views = [
+
+                {
+                    state: "frozen",
+
+                    ySplit: 1
+                }
+            ];
         });
-
-                sheet.autoFilter = {
-
-            from: "A1",
-
-            to: "G1"
-        };
-
-        sheet.views = [
-
-            {
-                state: "frozen",
-                ySplit: 1
-            }
-        ];
 
         res.setHeader(
             "Content-Type",
@@ -766,22 +797,23 @@ app.get(
 
         res.setHeader(
             "Content-Disposition",
-            "attachment; filename=TeamTasks.xlsx"
+            "attachment; filename=TeamTask.xlsx"
         );
 
         await workbook.xlsx.write(res);
 
         res.end();
+
     }
 );
 
-        app.listen(
-            PORT,
-            "0.0.0.0",
-            () => {
+app.listen(
+    PORT,
+    "0.0.0.0",
+    () => {
 
-                console.log(
-                    `Server running on port ${PORT}`
-                );
-            }
+        console.log(
+            `Server running on port ${PORT}`
         );
+    }
+);
