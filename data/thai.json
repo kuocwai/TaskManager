@@ -4,9 +4,9 @@
             "taskName": "Vá lỗi AI Phase 1: TN3 fix & Null crash fix",
             "description": "Chỉnh sửa mã nguồn Python và cấu hình Prompt lớp LLM nhằm loại bỏ triệt để tình trạng AI trả về giá trị null gây lỗi parse (Null crash fix) ở tính năng xuất báo cáo sự cố (TN3 fix). Xử lý dứt điểm Rate Limit API (HTTP 429).",
             "deadline": "14/06/2026",
-            "progress": 0,
+            "progress": 100,
             "note": "Tuần 1 - Thêm hard constraint vào prompt layer và bọc mã nguồn bằng khối Try-Except. Cần thiết kế cơ chế ngắt mạch Fallback tự động.",
-            "status": "Pending",
+            "status": "Done",
             "id": 1781101863825,
             "createdAt": "2026-06-10T14:31:00.100Z"
         },

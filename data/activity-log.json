@@ -1,6 +1,69 @@
 {
     "logs": [
         {
+            "id": 1781257993124,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi AI Phase 1: TN3 fix & Null crash fix",
+            "time": "16:53:13 12/6/2026"
+        },
+        {
+            "id": 1781257983658,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Xây dựng lõi SOAR & Tích hợp Threat Intelligence dữ liệu",
+            "time": "16:53:03 12/6/2026"
+        },
+        {
+            "id": 1781256911438,
+            "user": "master-task",
+            "action": "DELETE",
+            "taskName": "123",
+            "time": "16:35:11 12/6/2026"
+        },
+        {
+            "id": 1781256895088,
+            "user": "master-task",
+            "action": "CREATE",
+            "taskName": "123",
+            "time": "16:34:55 12/6/2026"
+        },
+        {
+            "id": 1781256783519,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Xây dựng lõi SOAR & Tích hợp Threat Intelligence dữ liệu",
+            "time": "16:33:03 12/6/2026"
+        },
+        {
+            "id": 1781241622122,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi AI Phase 1: TN3 fix & Null crash fix",
+            "time": "12:20:22 12/6/2026"
+        },
+        {
+            "id": 1781241616812,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi AI Phase 1: TN3 fix & Null crash fix",
+            "time": "12:20:16 12/6/2026"
+        },
+        {
+            "id": 1781238494547,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi AI Phase 1: TN3 fix & Null crash fix",
+            "time": "11:28:14 12/6/2026"
+        },
+        {
+            "id": 1781238486663,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi AI Phase 1: TN3 fix & Null crash fix",
+            "time": "11:28:06 12/6/2026"
+        },
+        {
             "id": 1781102892783,
             "user": "master-task",
             "action": "UPDATE",

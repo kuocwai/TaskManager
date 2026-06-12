@@ -1,3 +1,5 @@
+const ExcelJS = require("exceljs");
+
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
@@ -24,6 +26,23 @@ const USERS = [
     "trong",
     "doannghia"
 ];
+
+function parseDeadline(deadline) {
+
+    const parts =
+        deadline.split("/");
+
+    if (parts.length !== 3) {
+
+        return new Date(deadline);
+    }
+
+    return new Date(
+        Number(parts[2]),
+        Number(parts[1]) - 1,
+        Number(parts[0])
+    );
+}
 
 function getFile(name) {
 
@@ -504,22 +523,22 @@ app.post(
                 readJson(target);
 
             (group.tasks || [])
-            .forEach(task => {
+                .forEach(task => {
 
-                task.id =
-                    Date.now() +
-                    Math.floor(
-                        Math.random() * 10000
-                    );
+                    task.id =
+                        Date.now() +
+                        Math.floor(
+                            Math.random() * 10000
+                        );
 
-                task.createdAt =
-                    new Date()
-                    .toISOString();
+                    task.createdAt =
+                        new Date()
+                            .toISOString();
 
-                data.tasks.push(task);
+                    data.tasks.push(task);
 
-                imported++;
-            });
+                    imported++;
+                });
 
             writeJson(
                 target,
@@ -542,13 +561,227 @@ app.post(
     }
 );
 
-app.listen(
-    PORT,
-    "0.0.0.0",
-    () => {
+/*
+====================
+EXPORT EXCEL
+====================
+*/
 
-        console.log(
-            `Server running on port ${PORT}`
+app.get(
+    "/api/export/excel",
+    async (req, res) => {
+
+        const data =
+            readJson(currentFile || "master-task");
+
+        const workbook =
+            new ExcelJS.Workbook();
+
+        const sheet =
+            workbook.addWorksheet(
+                "Tasks"
+            );
+
+        sheet.columns = [
+
+            {
+                header: "Tên Task",
+                key: "taskName",
+                width: 35
+            },
+
+            {
+                header: "Người thực hiện",
+                key: "assignee",
+                width: 20
+            },
+
+            {
+                header: "Nội dung",
+                key: "description",
+                width: 60
+            },
+
+            {
+                header: "Deadline",
+                key: "deadline",
+                width: 15
+            },
+
+            {
+                header: "Tiến độ",
+                key: "progress",
+                width: 15
+            },
+
+            {
+                header: "Ghi chú",
+                key: "note",
+                width: 40
+            },
+
+            {
+                header: "Trạng thái",
+                key: "status",
+                width: 18
+            }
+        ];
+        sheet.getRow(1).eachCell(cell => {
+
+            cell.font = {
+                bold: true,
+                color: {
+                    argb: "FFFFFFFF"
+                }
+            };
+
+            cell.fill = {
+                type: "pattern",
+                pattern: "solid",
+                fgColor: {
+                    argb: "FFD32F2F"
+                }
+            };
+
+            cell.alignment = {
+                horizontal: "center",
+                vertical: "middle"
+            };
+        });
+
+        const deadlineMap = {};
+
+        let colorIndex = 0;
+
+        data.tasks.forEach(task => {
+
+            if (
+                !deadlineMap[
+                task.deadline
+                ]
+            ) {
+
+                deadlineMap[
+                    task.deadline
+                ] =
+                    colorIndex % 2 === 0
+                        ? "FFCFE2F3"
+                        : "FFEFEFEF";
+
+                colorIndex++;
+            }
+
+            const row =
+                sheet.addRow({
+
+                    taskName:
+                        task.taskName,
+
+                    assignee:
+                        task.assignee || "-",
+
+                    description:
+                        task.description,
+
+                    deadline:
+                        task.deadline,
+
+                    progress:
+                        `${task.progress}%`,
+
+                    note:
+                        task.note,
+
+                    status:
+                        task.status
+                });
+
+            const rowColor =
+                deadlineMap[
+                task.deadline
+                ];
+
+            row.eachCell(cell => {
+
+                cell.fill = {
+
+                    type: "pattern",
+
+                    pattern: "solid",
+
+                    fgColor: {
+                        argb: rowColor
+                    }
+                };
+
+                cell.border = {
+
+                    top: {
+                        style: "thin"
+                    },
+
+                    left: {
+                        style: "thin"
+                    },
+
+                    bottom: {
+                        style: "thin"
+                    },
+
+                    right: {
+                        style: "thin"
+                    }
+                };
+
+                cell.alignment = {
+
+                    vertical:
+                        "middle",
+
+                    wrapText:
+                        true
+                };
+            });
+        });
+
+                sheet.autoFilter = {
+
+            from: "A1",
+
+            to: "G1"
+        };
+
+        sheet.views = [
+
+            {
+                state: "frozen",
+                ySplit: 1
+            }
+        ];
+
+        res.setHeader(
+            "Content-Type",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         );
+
+        res.setHeader(
+            "Content-Disposition",
+            "attachment; filename=TeamTasks.xlsx"
+        );
+
+        await workbook.xlsx.write(res);
+
+        res.end();
     }
 );
+
+        app.listen(
+            PORT,
+            "0.0.0.0",
+            () => {
+
+                console.log(
+                    `Server running on port ${PORT}`
+                );
+            }
+        );

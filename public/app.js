@@ -11,6 +11,48 @@ const editModal =
 
 let currentEditId = null;
 
+function formatDate(dateValue) {
+
+    if (!dateValue) {
+        return "";
+    }
+
+    const [year, month, day] =
+        dateValue.split("-");
+
+    return `${day}/${month}/${year}`;
+}
+
+function parseDeadline(deadline) {
+
+    if (!deadline) {
+        return null;
+    }
+
+    const parts =
+        deadline.split("/");
+
+    if (parts.length !== 3) {
+
+        return new Date(deadline);
+    }
+
+    const day =
+        Number(parts[0]);
+
+    const month =
+        Number(parts[1]) - 1;
+
+    const year =
+        Number(parts[2]);
+
+    return new Date(
+        year,
+        month,
+        day
+    );
+}
+
 function getStatusBadge(status) {
 
     if (status === "Done") {
@@ -71,8 +113,16 @@ function getDeadlineStatus(deadline) {
     const today =
         new Date();
 
+    today.setHours(
+        0, 0, 0, 0
+    );
+
     const due =
-        new Date(deadline);
+        parseDeadline(deadline);
+
+    due.setHours(
+        0, 0, 0, 0
+    );
 
     const diff =
 
@@ -320,6 +370,14 @@ document
     };
 
 document
+    .getElementById("exportBtn")
+    .onclick = () => {
+
+        window.location.href =
+            "/api/export/excel";
+    };
+
+document
     .getElementById("saveTask")
     .onclick = async () => {
 
@@ -336,9 +394,11 @@ document
                 ).value,
 
             deadline:
-                document.getElementById(
-                    "deadline"
-                ).value,
+                formatDate(
+                    document.getElementById(
+                        "deadline"
+                    ).value
+                ),
 
             progress:
                 Number(
@@ -450,11 +510,14 @@ async function editTask(id) {
         ).value =
         task.description;
 
+    const parts =
+        task.deadline.split("/");
+
     document
         .getElementById(
             "editDeadline"
         ).value =
-        task.deadline;
+        `${parts[2]}-${parts[1]}-${parts[0]}`;
 
     document
         .getElementById(
@@ -779,11 +842,13 @@ document
                             .value,
 
                     deadline:
-                        document
-                            .getElementById(
-                                "editDeadline"
-                            )
-                            .value,
+                        formatDate(
+                            document
+                                .getElementById(
+                                    "editDeadline"
+                                )
+                                .value
+                        ),
 
                     progress,
 
