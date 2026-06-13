@@ -650,9 +650,14 @@ app.get(
                 }
             ];
 
+            sheet.getRow(1).height = 28;
             sheet.getRow(1).eachCell(cell => {
 
                 cell.font = {
+
+                    name: "Arial",
+
+                    size: 15,
 
                     bold: true,
 
@@ -668,7 +673,7 @@ app.get(
                     pattern: "solid",
 
                     fgColor: {
-                        argb: "FFD32F2F"
+                        argb: "FF0B5394"
                     }
                 };
 
@@ -731,6 +736,13 @@ app.get(
 
                 row.eachCell(cell => {
 
+                    cell.font = {
+
+                        name: "Arial",
+
+                        size: 13
+                    };
+
                     cell.fill = {
 
                         type: "pattern",
@@ -738,8 +750,7 @@ app.get(
                         pattern: "solid",
 
                         fgColor: {
-                            argb:
-                                rowColor
+                            argb: rowColor
                         }
                     };
 
@@ -770,6 +781,31 @@ app.get(
                         wrapText:
                             true
                     };
+
+                    if (
+                        cell.col === 4 || // Deadline
+                        cell.col === 5 || // Progress
+                        cell.col === 7    // Status
+                    ) {
+
+                        cell.alignment = {
+
+                            horizontal: "center",
+
+                            vertical: "middle",
+
+                            wrapText: true
+                        };
+                    }
+                    else {
+
+                        cell.alignment = {
+
+                            vertical: "middle",
+
+                            wrapText: true
+                        };
+                    }
                 });
             });
 
