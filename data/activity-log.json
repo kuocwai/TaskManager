@@ -1,6 +1,76 @@
 {
     "logs": [
         {
+            "id": 1781588958936,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
+            "time": "12:49:18 16/6/2026"
+        },
+        {
+            "id": 1781588948779,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
+            "time": "12:49:08 16/6/2026"
+        },
+        {
+            "id": 1781588930703,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Lập trình Backend tương tác SOAR: Telegram Approve/Reject",
+            "time": "12:48:50 16/6/2026"
+        },
+        {
+            "id": 1781504531614,
+            "user": "trong",
+            "action": "UPDATE",
+            "taskName": "Dọn nợ Dashboard Phase 1 & Triển khai Web Target (OWASP Juice Shop)",
+            "time": "13:22:11 15/6/2026"
+        },
+        {
+            "id": 1781504525245,
+            "user": "trong",
+            "action": "UPDATE",
+            "taskName": "Dọn nợ Dashboard Phase 1 & Triển khai Web Target (OWASP Juice Shop)",
+            "time": "13:22:05 15/6/2026"
+        },
+        {
+            "id": 1781504525084,
+            "user": "trong",
+            "action": "UPDATE",
+            "taskName": "Dọn nợ Dashboard Phase 1 & Triển khai Web Target (OWASP Juice Shop)",
+            "time": "13:22:05 15/6/2026"
+        },
+        {
+            "id": 1781500182166,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi Pipeline bảo mật: Bật mã hóa TLS/SSL & Sửa chỉ số Nmap target",
+            "time": "12:09:42 15/6/2026"
+        },
+        {
+            "id": 1781495044026,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
+            "time": "10:44:04 15/6/2026"
+        },
+        {
+            "id": 1781495037715,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
+            "time": "10:43:57 15/6/2026"
+        },
+        {
+            "id": 1781495015704,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi AI Phase 1: TN3 fix & Null crash fix",
+            "time": "10:43:35 15/6/2026"
+        },
+        {
             "id": 1781257993124,
             "user": "thai",
             "action": "UPDATE",

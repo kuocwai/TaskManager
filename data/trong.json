@@ -4,7 +4,7 @@
             "taskName": "Dọn nợ Dashboard Phase 1 & Triển khai Web Target (OWASP Juice Shop)",
             "description": "Sửa đổi, căn chỉnh lại toàn bộ các biểu đồ hiển thị sai chỉ số dữ liệu ở Phase 1. Deploy ứng dụng OWASP Juice Shop bằng Docker container. Cấu hình ModSecurity WAF và thiết lập cơ chế tự động forward WAF audit log về Wazuh Manager.",
             "deadline": "14/06/2026",
-            "progress": 0,
+            "progress": 100,
             "note": "Tuần 1 - Bước quan trọng tạo lập nguồn log Web thô đầu vào. Phối hợp với Nhân Nghĩa để cấu hình firewall bảo vệ máy chủ ứng dụng.",
             "status": "Pending",
             "id": 1781101862328,

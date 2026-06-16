@@ -14,9 +14,9 @@
             "taskName": "Lập trình Backend tương tác SOAR: Telegram Approve/Reject",
             "description": "Xây dựng mã nguồn xử lý nút bấm Inline Keyboard trên giao diện Chat Bot Telegram. Lập trình API tiếp nhận gói tin callback dữ liệu điều khiển hai chiều phản hồi từ Analyst dội ngược về SOC backend.",
             "deadline": "21/06/2026",
-            "progress": 0,
+            "progress": 100,
             "note": "Tuần 2 - Đóng vai trò làm đòn bẩy cho tính năng phản ứng có con người kiểm soát (Human-in-the-loop).",
-            "status": "Pending",
+            "status": "Done",
             "id": 1781101870027,
             "createdAt": "2026-06-10T14:31:00.100Z"
         },

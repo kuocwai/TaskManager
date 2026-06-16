@@ -108,7 +108,22 @@ function showTaskSection() {
         .classList.remove("hidden");
 }
 
-function getDeadlineStatus(deadline) {
+function getDeadlineStatus(
+    deadline,
+    status
+) {
+
+    /*
+    Nếu đã Done thì không hiện
+    Còn bao nhiêu ngày hoặc Quá hạn
+    */
+
+    if (
+        status === "Done"
+    ) {
+
+        return "";
+    }
 
     const today =
         new Date();
@@ -186,15 +201,12 @@ async function loadTasks() {
 <td>${task.description}</td>
 
             <td>
-
-${task.deadline}
-
-<br>
-
-${getDeadlineStatus(
-            task.deadline
+    ${task.deadline}
+    <br>
+    ${getDeadlineStatus(
+            task.deadline,
+            task.status
         )}
-
 </td>
 
             <td>
