@@ -4,9 +4,9 @@
             "taskName": "Triển khai hạ tầng và xử lý nợ kỹ thuật lõi",
             "description": "Bật mã hóa TLS/SSL toàn bộ đường truyền, xử lý lỗi nmap dropped packet, cài Juice Shop + WAF ModSecurity, cấu hình forward log API OpenStack và cài đặt môi trường VM cho TheHive, MISP, Cortex.",
             "deadline": "14/06/2026",
-            "progress": 0,
-            "note": "Nhiệm vụ tổng Tuần 1 - Tập trung toàn lực vào việc dọn sạch backlog cũ và dựng hạ tầng thô cho Web, Cloud và SOC điều phối.",
-            "status": "Pending",
+            "progress": 90,
+            "note": "Còn cloud chưa cài đặt\n",
+            "status": "In Progress",
             "id": 1781101869384,
             "createdAt": "2026-06-10T14:31:00.097Z"
         },
@@ -16,7 +16,7 @@
             "deadline": "21/06/2026",
             "progress": 0,
             "note": "Nhiệm vụ tổng Tuần 2 - Kết nối toàn bộ các thành phần hạ tầng riêng lẻ thành một chuỗi pipeline dữ liệu SOC thống nhất.",
-            "status": "Pending",
+            "status": "In Progress",
             "id": 1781101867758,
             "createdAt": "2026-06-10T14:31:00.097Z"
         },

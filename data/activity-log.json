@@ -1,6 +1,55 @@
 {
     "logs": [
         {
+            "id": 1782035458300,
+            "user": "trong",
+            "action": "UPDATE",
+            "taskName": "Quy hoạch vận hành TheHive & Thiết kế trực quan hóa dữ liệu nâng cao",
+            "time": "16:50:58 21/6/2026"
+        },
+        {
+            "id": 1782031805035,
+            "user": "trong",
+            "action": "UPDATE",
+            "taskName": "Quy hoạch vận hành TheHive & Thiết kế trực quan hóa dữ liệu nâng cao",
+            "time": "15:50:05 21/6/2026"
+        },
+        {
+            "id": 1782031802441,
+            "user": "trong",
+            "action": "UPDATE",
+            "taskName": "Dọn nợ Dashboard Phase 1 & Triển khai Web Target (OWASP Juice Shop)",
+            "time": "15:50:02 21/6/2026"
+        },
+        {
+            "id": 1782031215250,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Triển khai hạ tầng và xử lý nợ kỹ thuật lõi",
+            "time": "15:40:15 21/6/2026"
+        },
+        {
+            "id": 1782031204686,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Triển khai hạ tầng và xử lý nợ kỹ thuật lõi",
+            "time": "15:40:04 21/6/2026"
+        },
+        {
+            "id": 1782031199265,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Xây dựng lõi SOAR & Tích hợp Threat Intelligence dữ liệu",
+            "time": "15:39:59 21/6/2026"
+        },
+        {
+            "id": 1782031193894,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Triển khai hạ tầng và xử lý nợ kỹ thuật lõi",
+            "time": "15:39:53 21/6/2026"
+        },
+        {
             "id": 1782031120667,
             "user": "khoa",
             "action": "UPDATE",

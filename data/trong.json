@@ -6,7 +6,7 @@
             "deadline": "14/06/2026",
             "progress": 100,
             "note": "Tuần 1 - Bước quan trọng tạo lập nguồn log Web thô đầu vào. Phối hợp với Nhân Nghĩa để cấu hình firewall bảo vệ máy chủ ứng dụng.",
-            "status": "Pending",
+            "status": "Done",
             "id": 1781101862328,
             "createdAt": "2026-06-10T14:31:00.102Z"
         },
@@ -14,9 +14,9 @@
             "taskName": "Quy hoạch vận hành TheHive & Thiết kế trực quan hóa dữ liệu nâng cao",
             "description": "Thiết lập hệ thống hóa cấu trúc Template sự cố, thẻ gán phân loại (Tags), định nghĩa các mức độ nghiêm trọng (Severity) trên giao diện TheHive. Khai thác Vega/Canvas trên OpenSearch vẽ Dashboard luồng traffic an ninh nâng cao.",
             "deadline": "21/06/2026",
-            "progress": 80,
+            "progress": 100,
             "note": "Tuần 2 - Thiết lập cấu hình OpenSearch Reporting để tự động xuất và gửi báo cáo PDF định kỳ hàng tuần về Email của nhóm.",
-            "status": "Pending",
+            "status": "Done",
             "id": 1781101866290,
             "createdAt": "2026-06-10T14:31:00.102Z"
         },
