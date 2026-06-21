@@ -1,6 +1,20 @@
 {
     "logs": [
         {
+            "id": 1782031120667,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
+            "time": "15:38:40 21/6/2026"
+        },
+        {
+            "id": 1781961385373,
+            "user": "trong",
+            "action": "UPDATE",
+            "taskName": "Quy hoạch vận hành TheHive & Thiết kế trực quan hóa dữ liệu nâng cao",
+            "time": "20:16:25 20/6/2026"
+        },
+        {
             "id": 1781588958936,
             "user": "khoa",
             "action": "UPDATE",

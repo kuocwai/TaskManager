@@ -14,7 +14,7 @@
             "taskName": "Quy hoạch vận hành TheHive & Thiết kế trực quan hóa dữ liệu nâng cao",
             "description": "Thiết lập hệ thống hóa cấu trúc Template sự cố, thẻ gán phân loại (Tags), định nghĩa các mức độ nghiêm trọng (Severity) trên giao diện TheHive. Khai thác Vega/Canvas trên OpenSearch vẽ Dashboard luồng traffic an ninh nâng cao.",
             "deadline": "21/06/2026",
-            "progress": 0,
+            "progress": 80,
             "note": "Tuần 2 - Thiết lập cấu hình OpenSearch Reporting để tự động xuất và gửi báo cáo PDF định kỳ hàng tuần về Email của nhóm.",
             "status": "Pending",
             "id": 1781101866290,
