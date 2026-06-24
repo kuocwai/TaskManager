@@ -4,7 +4,7 @@
             "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
             "description": "Trực tiếp cài đặt, cấu hình tối ưu tài nguyên và triển khai dịch vụ máy ảo cho hai nền tảng TheHive (Case Management) và MISP (Threat Intelligence Platform) trên môi trường Lab ảo hóa.",
             "deadline": "14/06/2026",
-            "progress": 0,
+            "progress": 100,
             "note": "Tuần 1 - Cần thống nhất dải IP kết nối ZeroTier với Nhân Nghĩa để đảm bảo luồng routing thông suốt.",
             "status": "Done",
             "id": 1781101865481,
@@ -14,9 +14,9 @@
             "taskName": "Lập trình kịch bản tích hợp: Script Wazuh->TheHive & Script MISP->CDB Lists",
             "description": "Viết script Python tích hợp hệ thống: Tự động hóa việc chuyển đổi các Alert High/Critical từ Wazuh sang tạo Case sự cố trên TheHive; lập trình script tự động kéo chỉ số IOC từ MISP nạp vào bộ CDB Lists của Wazuh để block thời gian thực.",
             "deadline": "21/06/2026",
-            "progress": 0,
-            "note": "Tuần 2 - Đòi hỏi tối ưu hóa tốc độ truy vấn để không gây nghẽn hàng đợi (queue) xử lý log của Wazuh Manager.",
-            "status": "Pending",
+            "progress": 100,
+            "note": "Done",
+            "status": "Done",
             "id": 1781101866804,
             "createdAt": "2026-06-10T14:31:00.099Z"
         },
@@ -39,6 +39,16 @@
             "status": "Pending",
             "id": 1781101865340,
             "createdAt": "2026-06-10T14:31:00.099Z"
+        },
+        {
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "description": "cortex chủ động sử dụng các tool(được gắn API) để tự động thực hiện analyze và respone(SOAR), thehive lấy alert từ wazuh để thực hiện phân tích và quyết định phản ứng",
+            "deadline": "25/06/2026",
+            "progress": 100,
+            "note": "Chưa tối ưu và kiểm tra",
+            "status": "Done",
+            "id": 1782111184180,
+            "createdAt": "2026-06-22T06:53:04.180Z"
         }
     ]
 }

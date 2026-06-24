@@ -1,6 +1,237 @@
 {
     "logs": [
         {
+            "id": 1782283693270,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "time": "13:48:13 24/6/2026"
+        },
+        {
+            "id": 1782283678172,
+            "user": "thai",
+            "action": "DELETE",
+            "taskName": "11",
+            "time": "13:47:58 24/6/2026"
+        },
+        {
+            "id": 1782283674651,
+            "user": "khoa",
+            "action": "DELETE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive",
+            "time": "13:47:54 24/6/2026"
+        },
+        {
+            "id": 1782283673861,
+            "user": "thai",
+            "action": "DELETE",
+            "taskName": "",
+            "time": "13:47:53 24/6/2026"
+        },
+        {
+            "id": 1782283670367,
+            "user": "thai",
+            "action": "DELETE",
+            "taskName": "1",
+            "time": "13:47:50 24/6/2026"
+        },
+        {
+            "id": 1782283667774,
+            "user": "khoa",
+            "action": "DELETE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive",
+            "time": "13:47:47 24/6/2026"
+        },
+        {
+            "id": 1782283443696,
+            "user": "thai",
+            "action": "CREATE",
+            "taskName": "11",
+            "time": "13:44:03 24/6/2026"
+        },
+        {
+            "id": 1782283090599,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Lập trình kịch bản tích hợp: Script Wazuh->TheHive & Script MISP->CDB Lists",
+            "time": "13:38:10 24/6/2026"
+        },
+        {
+            "id": 1782283072065,
+            "user": "thai",
+            "action": "CREATE",
+            "taskName": "",
+            "time": "13:37:52 24/6/2026"
+        },
+        {
+            "id": 1782282982778,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive",
+            "time": "13:36:22 24/6/2026"
+        },
+        {
+            "id": 1782282970196,
+            "user": "thai",
+            "action": "CREATE",
+            "taskName": "1",
+            "time": "13:36:10 24/6/2026"
+        },
+        {
+            "id": 1782282902097,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive",
+            "time": "13:35:02 24/6/2026"
+        },
+        {
+            "id": 1782282804770,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
+            "time": "13:33:24 24/6/2026"
+        },
+        {
+            "id": 1782227009794,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Xây dựng lõi SOAR & Tích hợp Threat Intelligence dữ liệu",
+            "time": "22:03:29 23/6/2026"
+        },
+        {
+            "id": 1782226953429,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "time": "22:02:33 23/6/2026"
+        },
+        {
+            "id": 1782203920558,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Nghiên cứu Prompt AI nâng cao (TN5 + TN6) & Đóng gói Git Repo",
+            "time": "15:38:40 23/6/2026"
+        },
+        {
+            "id": 1782201077916,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi Pipeline bảo mật: Bật mã hóa TLS/SSL & Sửa chỉ số Nmap target",
+            "time": "14:51:17 23/6/2026"
+        },
+        {
+            "id": 1782201057960,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi Pipeline bảo mật: Bật mã hóa TLS/SSL & Sửa chỉ số Nmap target",
+            "time": "14:50:57 23/6/2026"
+        },
+        {
+            "id": 1782111897970,
+            "user": "thai",
+            "action": "CREATE",
+            "taskName": "Triển khai tính năng GeoIP Enrichment (Làm giàu dữ liệu địa lý)",
+            "time": "14:04:57 22/6/2026"
+        },
+        {
+            "id": 1782111237198,
+            "user": "master-task",
+            "action": "CREATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "time": "13:53:57 22/6/2026"
+        },
+        {
+            "id": 1782111184182,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "time": "13:53:04 22/6/2026"
+        },
+        {
+            "id": 1782110791456,
+            "user": "thai",
+            "action": "DELETE",
+            "taskName": "Cấu hình cổng kết nối thông minh: Cortex <-> TheHive Integration",
+            "time": "13:46:31 22/6/2026"
+        },
+        {
+            "id": 1782110433859,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi Pipeline bảo mật: Bật mã hóa TLS/SSL & Sửa chỉ số Nmap target",
+            "time": "13:40:33 22/6/2026"
+        },
+        {
+            "id": 1782110412569,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi Pipeline bảo mật: Bật mã hóa TLS/SSL & Sửa chỉ số Nmap target",
+            "time": "13:40:12 22/6/2026"
+        },
+        {
+            "id": 1782110393826,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Dựng đường hầm claudeflare",
+            "time": "13:39:53 22/6/2026"
+        },
+        {
+            "id": 1782110343668,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Dựng đường hầm claudeflare",
+            "time": "13:39:03 22/6/2026"
+        },
+        {
+            "id": 1782110316250,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Setup server MISP",
+            "time": "13:38:36 22/6/2026"
+        },
+        {
+            "id": 1782110295021,
+            "user": "nhannghia",
+            "action": "CREATE",
+            "taskName": "Setup server MISP, config để MISP tự đi lấy thông tin tình báo từ các intelligence platform open source trên internet",
+            "time": "13:38:15 22/6/2026"
+        },
+        {
+            "id": 1782110178746,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Xây dựng tập dữ liệu Machine Learning Baseline & Trích xuất log kiểm thử AI",
+            "time": "13:36:18 22/6/2026"
+        },
+        {
+            "id": 1782110139046,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Vá lỗi Pipeline bảo mật: Bật mã hóa TLS/SSL & Sửa chỉ số Nmap target",
+            "time": "13:35:39 22/6/2026"
+        },
+        {
+            "id": 1782110131167,
+            "user": "nhannghia",
+            "action": "DELETE",
+            "taskName": "Triển khai hạ tầng điều phối Cortex package & Trích xuất log mẫu cho Rule Engine",
+            "time": "13:35:31 22/6/2026"
+        },
+        {
+            "id": 1782110119675,
+            "user": "nhannghia",
+            "action": "CREATE",
+            "taskName": "Dựng đường hầm claudeflare",
+            "time": "13:35:19 22/6/2026"
+        },
+        {
+            "id": 1782109216124,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Lập trình kịch bản tích hợp: Script Wazuh->TheHive & Script MISP->CDB Lists",
+            "time": "13:20:16 22/6/2026"
+        },
+        {
             "id": 1782035458300,
             "user": "trong",
             "action": "UPDATE",

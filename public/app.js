@@ -26,31 +26,28 @@ function formatDate(dateValue) {
 function parseDeadline(deadline) {
 
     if (!deadline) {
+
         return null;
     }
 
-    const parts =
-        deadline.split("/");
+    if (deadline.includes("/")) {
 
-    if (parts.length !== 3) {
+        const [day, month, year] =
+            deadline.split("/");
+
+        return new Date(
+            year,
+            month - 1,
+            day
+        );
+    }
+
+    if (deadline.includes("-")) {
 
         return new Date(deadline);
     }
 
-    const day =
-        Number(parts[0]);
-
-    const month =
-        Number(parts[1]) - 1;
-
-    const year =
-        Number(parts[2]);
-
-    return new Date(
-        year,
-        month,
-        day
-    );
+    return null;
 }
 
 function getStatusBadge(status) {
@@ -108,19 +105,9 @@ function showTaskSection() {
         .classList.remove("hidden");
 }
 
-function getDeadlineStatus(
-    deadline,
-    status
-) {
+function getDeadlineStatus(deadline, status) {
 
-    /*
-    Nếu đã Done thì không hiện
-    Còn bao nhiêu ngày hoặc Quá hạn
-    */
-
-    if (
-        status === "Done"
-    ) {
+    if (!deadline) {
 
         return "";
     }
@@ -135,23 +122,26 @@ function getDeadlineStatus(
     const due =
         parseDeadline(deadline);
 
+    if (!due) {
+
+        return "";
+    }
+
     due.setHours(
         0, 0, 0, 0
     );
 
     const diff =
-
         Math.ceil(
-
             (due - today)
-
             /
-
             (1000 * 60 * 60 * 24)
-
         );
 
-    if (diff < 0) {
+    if (
+        diff < 0 &&
+        status !== "Done"
+    ) {
 
         return `
         <span style="color:red">
@@ -160,7 +150,11 @@ function getDeadlineStatus(
         `;
     }
 
-    if (diff <= 3) {
+    if (
+        diff <= 3 &&
+        diff >= 0 &&
+        status !== "Done"
+    ) {
 
         return `
         <span style="color:#f57c00">

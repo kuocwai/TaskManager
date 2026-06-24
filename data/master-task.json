@@ -12,11 +12,11 @@
         },
         {
             "taskName": "Xây dựng lõi SOAR & Tích hợp Threat Intelligence dữ liệu",
-            "description": "Phát triển các script kết nối Wazuh->TheHive, MISP->CDB Lists, cấu hình kết nối API Cortex <-> TheHive Analyzer. Lập trình backend Telegram Inline Keyboard tương tác Approve/Reject. Thiết kế biểu mẫu Ticket và Dashboard Vega/Canvas nâng cao.",
+            "description": "Phát triển các script kết nối Wazuh->TheHive, MISP->CDB Lists, cấu hình kết nối API Cortex <-> TheHive Analyzer. Thiết kế biểu mẫu Ticket và Dashboard Vega/Canvas nâng cao.",
             "deadline": "21/06/2026",
-            "progress": 0,
-            "note": "Nhiệm vụ tổng Tuần 2 - Kết nối toàn bộ các thành phần hạ tầng riêng lẻ thành một chuỗi pipeline dữ liệu SOC thống nhất.",
-            "status": "In Progress",
+            "progress": 100,
+            "note": "Xong",
+            "status": "Done",
             "id": 1781101867758,
             "createdAt": "2026-06-10T14:31:00.097Z"
         },
@@ -39,6 +39,16 @@
             "status": "Pending",
             "id": 1781101865817,
             "createdAt": "2026-06-10T14:31:00.097Z"
+        },
+        {
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "description": "cortex chủ động sử dụng các tool(được gắn API) để tự động thực hiện analyze và respone(SOAR), thehive lấy alert từ wazuh để thực hiện phân tích và quyết định phản ứng",
+            "deadline": "22/06/2026",
+            "progress": 100,
+            "note": "Chưa setup kết nối giữa thehive và wazuh",
+            "status": "Done",
+            "id": 1782111237196,
+            "createdAt": "2026-06-22T06:53:57.196Z"
         }
     ]
 }

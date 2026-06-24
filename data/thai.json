@@ -21,24 +21,24 @@
             "createdAt": "2026-06-10T14:31:00.100Z"
         },
         {
-            "taskName": "Cấu hình cổng kết nối thông minh: Cortex <-> TheHive Integration",
-            "description": "Thiết lập API key và phân quyền kết nối giữa Cortex server và TheHive. Cấu hình kích hoạt các bộ Analyzers độc lập trên Cortex để tự động phân tích định danh mức độ độc hại cho các Observable (IP, URL, File Hash).",
-            "deadline": "28/06/2026",
-            "progress": 0,
-            "note": "Tuần 3 - Phối hợp chặt chẽ với Nhân Nghĩa ở khâu cài đặt package thô để lấy thông số kết nối API chính xác.",
-            "status": "Pending",
-            "id": 1781101862877,
-            "createdAt": "2026-06-10T14:31:00.100Z"
-        },
-        {
             "taskName": "Nghiên cứu Prompt AI nâng cao (TN5 + TN6) & Đóng gói Git Repo",
             "description": "Phối hợp với Khoa thiết kế, thử nghiệm và tối ưu hóa tệp Prompt Engineering cho tính năng dịch ngôn ngữ tự nhiên sang câu lệnh SIEM (NL to Query) và tự sinh Playbook xử lý. Tiến hành tái cấu trúc, làm sạch mã nguồn và đồng bộ lên GitHub.",
             "deadline": "08/07/2026",
             "progress": 0,
             "note": "Tuần 4 - Đóng gói toàn bộ sản phẩm code tự phát triển. Viết tài liệu ghi chú kỹ thuật phân tích cho module AI.",
-            "status": "Pending",
+            "status": "In Progress",
             "id": 1781101860521,
             "createdAt": "2026-06-10T14:31:00.100Z"
+        },
+        {
+            "taskName": "Triển khai tính năng GeoIP Enrichment (Làm giàu dữ liệu địa lý)",
+            "description": "Nạp cơ sở dữ liệu MaxMind GeoLite2 vào Wazuh Indexer, thiết lập Ingest Pipeline tự động phân giải tọa độ từ IP và tạo biểu đồ Coordinate Map trên Dashboard.",
+            "deadline": "24/06/2026",
+            "progress": 0,
+            "note": "",
+            "status": "Pending",
+            "id": 1782111897969,
+            "createdAt": "2026-06-22T07:04:57.969Z"
         }
     ]
 }
