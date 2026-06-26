@@ -1,6 +1,307 @@
 {
     "logs": [
         {
+            "id": 1782460449719,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Cào trích xuất log bình thường từ syslog, endpoint, cloud, web ra định dạng CSV/JSON làm baseline cho ML.",
+            "time": "14:54:09 26/6/2026"
+        },
+        {
+            "id": 1782459719172,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Setup server MISP",
+            "time": "14:41:59 26/6/2026"
+        },
+        {
+            "id": 1782459696703,
+            "user": "nhannghia",
+            "action": "UPDATE",
+            "taskName": "Cào trích xuất log bình thường ra định dạng CSV/JSON làm baseline cho ML.",
+            "time": "14:41:36 26/6/2026"
+        },
+        {
+            "id": 1782459666312,
+            "user": "nhannghia",
+            "action": "CREATE",
+            "taskName": "Cào trích xuất log bình thường ra định dạng CSV/JSON làm baseline cho ML.",
+            "time": "14:41:06 26/6/2026"
+        },
+        {
+            "id": 1782459565644,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Fix các lỗi sau đợt pentest",
+            "time": "14:39:25 26/6/2026"
+        },
+        {
+            "id": 1782459551815,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:39:11 26/6/2026"
+        },
+        {
+            "id": 1782459456415,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thực hiện pentest toàn diện để kiểm tra toàn bộ hệ thống và ghi chú lại lỗi cần fix",
+            "time": "14:37:36 26/6/2026"
+        },
+        {
+            "id": 1782458232055,
+            "user": "doannghia",
+            "action": "UPDATE",
+            "taskName": "Lập trình tập lệnh phản ứng tự động Cloud: OpenStack SOAR script (Bước 4)",
+            "time": "14:17:12 26/6/2026"
+        },
+        {
+            "id": 1782458223129,
+            "user": "doannghia",
+            "action": "UPDATE",
+            "taskName": "Lập trình tập lệnh phản ứng tự động Cloud: OpenStack SOAR script (Bước 4)",
+            "time": "14:17:03 26/6/2026"
+        },
+        {
+            "id": 1782458201073,
+            "user": "doannghia",
+            "action": "UPDATE",
+            "taskName": "Tích hợp Cloud: Thu thập hạ tầng log OpenStack Control Plane (Bước 1)",
+            "time": "14:16:41 26/6/2026"
+        },
+        {
+            "id": 1782458195065,
+            "user": "doannghia",
+            "action": "UPDATE",
+            "taskName": "Tích hợp Cloud: Thu thập hạ tầng log OpenStack Control Plane (Bước 1)",
+            "time": "14:16:35 26/6/2026"
+        },
+        {
+            "id": 1782458065869,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:14:25 26/6/2026"
+        },
+        {
+            "id": 1782458040048,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:14:00 26/6/2026"
+        },
+        {
+            "id": 1782458040045,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:14:00 26/6/2026"
+        },
+        {
+            "id": 1782458039631,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458039629,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458039626,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458039624,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458039621,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458039599,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458039263,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458039257,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "14:13:59 26/6/2026"
+        },
+        {
+            "id": 1782458027784,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Triển khai hạ tầng và xử lý nợ kỹ thuật lõi",
+            "time": "14:13:47 26/6/2026"
+        },
+        {
+            "id": 1782458008385,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:28 26/6/2026"
+        },
+        {
+            "id": 1782458008350,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:28 26/6/2026"
+        },
+        {
+            "id": 1782458008113,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:28 26/6/2026"
+        },
+        {
+            "id": 1782458008053,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:28 26/6/2026"
+        },
+        {
+            "id": 1782458008049,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:28 26/6/2026"
+        },
+        {
+            "id": 1782458007833,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:27 26/6/2026"
+        },
+        {
+            "id": 1782458007824,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:27 26/6/2026"
+        },
+        {
+            "id": 1782458007770,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:27 26/6/2026"
+        },
+        {
+            "id": 1782458007639,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:27 26/6/2026"
+        },
+        {
+            "id": 1782458007528,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:27 26/6/2026"
+        },
+        {
+            "id": 1782458007373,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:27 26/6/2026"
+        },
+        {
+            "id": 1782458006949,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782458006903,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782458006886,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782458006837,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782458006813,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782458006798,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782458006768,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782458006746,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack(devstack)",
+            "time": "14:13:26 26/6/2026"
+        },
+        {
+            "id": 1782457915899,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Đọc tài liệu toàn bộ hệ thống, ghi lại các câu lệnh đã dùng để fix",
+            "time": "14:11:55 26/6/2026"
+        },
+        {
             "id": 1782308388391,
             "user": "khoa",
             "action": "CREATE",

@@ -34,11 +34,21 @@
             "taskName": "Setup server MISP",
             "description": "Config để MISP tự đi lấy thông tin tình báo từ các intelligence platform open source trên internet",
             "deadline": "23/06/2026",
-            "progress": 0,
+            "progress": 100,
             "note": "",
-            "status": "In Progress",
+            "status": "Done",
             "id": 1782110295019,
             "createdAt": "2026-06-22T06:38:15.019Z"
+        },
+        {
+            "taskName": "Cào trích xuất log bình thường từ syslog, endpoint, cloud, web ra định dạng CSV/JSON làm baseline cho ML.",
+            "description": "Thu thập và export toàn bộ alert/log \"bình thường\" (benign activity) từ Wazuh Indexer(log của syslog, endpoint, cloud, web) ra CSV/JSON có cấu trúc, làm training data sạch cho anomaly detection model.",
+            "deadline": "30/06/2026",
+            "progress": 0,
+            "note": "Đợi Trọng về mở web, đợi Đoàn Nghĩa hoàn thành đẩy log từ cloud rồi hoàn thành web và cloud, trước mắt lấy log từ endpoint và syslog trước",
+            "status": "Pending",
+            "id": 1782459666310,
+            "createdAt": "2026-06-26T07:41:06.310Z"
         }
     ]
 }

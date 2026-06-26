@@ -4,9 +4,9 @@
             "taskName": "Triển khai hạ tầng và xử lý nợ kỹ thuật lõi",
             "description": "Bật mã hóa TLS/SSL toàn bộ đường truyền, xử lý lỗi nmap dropped packet, cài Juice Shop + WAF ModSecurity, cấu hình forward log API OpenStack và cài đặt môi trường VM cho TheHive, MISP, Cortex.",
             "deadline": "14/06/2026",
-            "progress": 90,
-            "note": "Còn cloud chưa cài đặt\n",
-            "status": "In Progress",
+            "progress": 100,
+            "note": "Done",
+            "status": "Done",
             "id": 1781101869384,
             "createdAt": "2026-06-10T14:31:00.097Z"
         },
@@ -32,10 +32,10 @@
         },
         {
             "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
-            "description": "Viết luật Lateral Movement. Đo lường metric độ trễ phản ứng. R&D Prompt Engineering cho AI TN5+TN6.",
+            "description": "Viết luật Lateral Movement. R&D Prompt Engineering cho AI TN5+TN6.",
             "deadline": "08/07/2026",
-            "progress": 90,
-            "note": "Chưa đo lường độ trễ metric",
+            "progress": 100,
+            "note": "",
             "status": "Done",
             "id": 1781101865817,
             "createdAt": "2026-06-10T14:31:00.097Z"
@@ -53,7 +53,7 @@
         {
             "taskName": "Thực hiện pentest toàn diện để kiểm tra toàn bộ hệ thống và ghi chú lại lỗi cần fix",
             "description": "Chỉ cần thực hiện pentest và làm báo cáo những bug",
-            "deadline": "25/06/2026",
+            "deadline": "28/06/2026",
             "progress": 0,
             "note": "",
             "status": "Pending",
@@ -62,7 +62,7 @@
         },
         {
             "taskName": "Fix các lỗi sau đợt pentest",
-            "description": "Fix những lỗi trong ghi chú của task pentest",
+            "description": "Fix những lỗi trong ghi chú của task pentest và Đo lường metric độ trễ phản ứng.",
             "deadline": "30/06/2026",
             "progress": 0,
             "note": "",
