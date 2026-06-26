@@ -1,6 +1,384 @@
 {
     "logs": [
         {
+            "id": 1782308388391,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Đọc tài liệu toàn bộ hệ thống, ghi lại các câu lệnh đã dùng để fix",
+            "time": "20:39:48 24/6/2026"
+        },
+        {
+            "id": 1782308279415,
+            "user": "master-task",
+            "action": "CREATE",
+            "taskName": "Fix các lỗi sau đợt pentest",
+            "time": "20:37:59 24/6/2026"
+        },
+        {
+            "id": 1782308220547,
+            "user": "master-task",
+            "action": "CREATE",
+            "taskName": "Thực hiện pentest toàn diện để kiểm tra toàn bộ hệ thống và ghi chú lại lỗi cần fix",
+            "time": "20:37:00 24/6/2026"
+        },
+        {
+            "id": 1782308160204,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "20:36:00 24/6/2026"
+        },
+        {
+            "id": 1782308128002,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Xây dựng lõi SOAR & Tích hợp Threat Intelligence dữ liệu",
+            "time": "20:35:28 24/6/2026"
+        },
+        {
+            "id": 1782308123516,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "time": "20:35:23 24/6/2026"
+        },
+        {
+            "id": 1782308112567,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
+            "time": "20:35:12 24/6/2026"
+        },
+        {
+            "id": 1782308075009,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "20:34:35 24/6/2026"
+        },
+        {
+            "id": 1782308041813,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Kiểm tra và fix MISP",
+            "time": "20:34:01 24/6/2026"
+        },
+        {
+            "id": 1782308020254,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Kiểm tra và fix lỗi 3 tính năng AI",
+            "time": "20:33:40 24/6/2026"
+        },
+        {
+            "id": 1782308001754,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Kiểm tra và fix lỗi các decoder và rule custom",
+            "time": "20:33:21 24/6/2026"
+        },
+        {
+            "id": 1782307977399,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack bằng docker",
+            "time": "20:32:57 24/6/2026"
+        },
+        {
+            "id": 1782307967311,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Thiết kế Rule Engine nâng cao: Decoder coverage audit, OWASP và OpenStack rules",
+            "time": "20:32:47 24/6/2026"
+        },
+        {
+            "id": 1782307957152,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Xây dựng Lateral movement rule, R&D AI (TN4+TN5+TN6)",
+            "time": "20:32:37 24/6/2026"
+        },
+        {
+            "id": 1782305870528,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Nghiên cứu Prompt AI nâng cao (TN5 + TN6) & Đóng gói Git Repo",
+            "time": "19:57:50 24/6/2026"
+        },
+        {
+            "id": 1782305857217,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Triển khai tính năng GeoIP Enrichment (Làm giàu dữ liệu địa lý)",
+            "time": "19:57:37 24/6/2026"
+        },
+        {
+            "id": 1782304893643,
+            "user": "thai",
+            "action": "UPDATE",
+            "taskName": "Nghiên cứu Prompt AI nâng cao (TN5 + TN6) & Đóng gói Git Repo",
+            "time": "19:41:33 24/6/2026"
+        },
+        {
+            "id": 1782304838214,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Kiểm tra và fix các lỗi của thehive và cortex",
+            "time": "19:40:38 24/6/2026"
+        },
+        {
+            "id": 1782304795711,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack bằng docker",
+            "time": "19:39:55 24/6/2026"
+        },
+        {
+            "id": 1782304782848,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Kiểm tra và fix MISP",
+            "time": "19:39:42 24/6/2026"
+        },
+        {
+            "id": 1782304762964,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Kiểm tra và fix lỗi các decoder và rule custom",
+            "time": "19:39:22 24/6/2026"
+        },
+        {
+            "id": 1782304739510,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Dựng cloud openstack bằng docker",
+            "time": "19:38:59 24/6/2026"
+        },
+        {
+            "id": 1782303952343,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Kiểm tra và fix MISP",
+            "time": "19:25:52 24/6/2026"
+        },
+        {
+            "id": 1782303893525,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Thiết kế Rule Engine nâng cao: Decoder coverage audit, OWASP và OpenStack rules",
+            "time": "19:24:53 24/6/2026"
+        },
+        {
+            "id": 1782303876795,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Dựng cloud openstack bằng docker",
+            "time": "19:24:36 24/6/2026"
+        },
+        {
+            "id": 1782302100121,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Xây dựng Lateral movement rule, R&D AI (TN4+TN5+TN6) và Cầm trịch Red Team Drill",
+            "time": "18:55:00 24/6/2026"
+        },
+        {
+            "id": 1782300709308,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cấu hình API giữa cortex --> thehive, wazuh <-->thehive ",
+            "time": "18:31:49 24/6/2026"
+        },
+        {
+            "id": 1782300694905,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Thiết kế Rule Engine nâng cao: Decoder coverage audit, OWASP và OpenStack rules",
+            "time": "18:31:34 24/6/2026"
+        },
+        {
+            "id": 1782300684131,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:31:24 24/6/2026"
+        },
+        {
+            "id": 1782300658670,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:30:58 24/6/2026"
+        },
+        {
+            "id": 1782300570657,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Kiểm tra và fix các lỗi của thehive và cortex",
+            "time": "18:29:30 24/6/2026"
+        },
+        {
+            "id": 1782300505839,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Kiểm tra và fix lỗi các decoder và rule custom",
+            "time": "18:28:25 24/6/2026"
+        },
+        {
+            "id": 1782300457065,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "Kiểm tra và fix lỗi 3 tính năng AI",
+            "time": "18:27:37 24/6/2026"
+        },
+        {
+            "id": 1782300401742,
+            "user": "khoa",
+            "action": "DELETE",
+            "taskName": "",
+            "time": "18:26:41 24/6/2026"
+        },
+        {
+            "id": 1782300392774,
+            "user": "khoa",
+            "action": "CREATE",
+            "taskName": "",
+            "time": "18:26:32 24/6/2026"
+        },
+        {
+            "id": 1782300306171,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Thiết kế Rule Engine nâng cao: Decoder coverage audit, OWASP và OpenStack rules",
+            "time": "18:25:06 24/6/2026"
+        },
+        {
+            "id": 1782300276538,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:36 24/6/2026"
+        },
+        {
+            "id": 1782300267085,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:27 24/6/2026"
+        },
+        {
+            "id": 1782300267073,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:27 24/6/2026"
+        },
+        {
+            "id": 1782300267054,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:27 24/6/2026"
+        },
+        {
+            "id": 1782300267036,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:27 24/6/2026"
+        },
+        {
+            "id": 1782300266981,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266972,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266958,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266949,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266929,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266885,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266875,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266863,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266845,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782300266442,
+            "user": "master-task",
+            "action": "UPDATE",
+            "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
+            "time": "18:24:26 24/6/2026"
+        },
+        {
+            "id": 1782284145344,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Cài đặt hệ thống lõi điều phối: TheHive VM + MISP VM",
+            "time": "13:55:45 24/6/2026"
+        },
+        {
+            "id": 1782284116911,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Xây dựng Lateral movement rule, R&D AI (TN4+TN5+TN6) và Cầm trịch Red Team Drill",
+            "time": "13:55:16 24/6/2026"
+        },
+        {
+            "id": 1782283858467,
+            "user": "khoa",
+            "action": "UPDATE",
+            "taskName": "Xây dựng Lateral movement rule, R&D AI (TN4+TN5+TN6) và Cầm trịch Red Team Drill",
+            "time": "13:50:58 24/6/2026"
+        },
+        {
             "id": 1782283693270,
             "user": "khoa",
             "action": "UPDATE",

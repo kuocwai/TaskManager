@@ -5,7 +5,7 @@
             "description": "Trực tiếp cài đặt, cấu hình tối ưu tài nguyên và triển khai dịch vụ máy ảo cho hai nền tảng TheHive (Case Management) và MISP (Threat Intelligence Platform) trên môi trường Lab ảo hóa.",
             "deadline": "14/06/2026",
             "progress": 100,
-            "note": "Tuần 1 - Cần thống nhất dải IP kết nối ZeroTier với Nhân Nghĩa để đảm bảo luồng routing thông suốt.",
+            "note": "Done",
             "status": "Done",
             "id": 1781101865481,
             "createdAt": "2026-06-10T14:31:00.099Z"
@@ -24,19 +24,19 @@
             "taskName": "Thiết kế Rule Engine nâng cao: Decoder coverage audit, OWASP và OpenStack rules",
             "description": "Thực hiện quy trình Decoder coverage audit hệ thống. Thiết kế Custom Decoder & Rules sử dụng Regex/PCRE2 để phát hiện 4 nhóm lỗi OWASP từ log Juice Shop. Code tiếp bộ Decoder/Rule cho log OpenStack Control Plane thu được từ bước 1 của Đoàn Nghĩa.",
             "deadline": "28/06/2026",
-            "progress": 0,
-            "note": "Tuần 3 - Chất xám cốt lõi của Detection Engineer. Cần lấy log thô mẫu do Nhân Nghĩa trích xuất để kiểm thử cú pháp bằng wazuh-logtest.",
-            "status": "Pending",
+            "progress": 100,
+            "note": "Done",
+            "status": "Done",
             "id": 1781101861983,
             "createdAt": "2026-06-10T14:31:00.099Z"
         },
         {
-            "taskName": "Xây dựng Lateral movement rule, R&D AI (TN5+TN6) và Cầm trịch Red Team Drill",
-            "description": "Viết luật phát hiện hành vi dịch chuyển ngang (Lateral movement). Phối hợp với Thái nghiên cứu Prompt và logic cho 2 tính năng AI nâng cao: TN5 (NL to Query) và TN6 (Dynamic Playbook). Đóng vai Red Team dùng máy Kali Linux tấn công phá hủy lab để test luồng.",
-            "deadline": "08/07/2026",
-            "progress": 0,
-            "note": "Tuần 4 - Nghiệm thu chất lượng phát hiện lỗi của hệ thống. Tự tay rà soát và duyệt quyển báo cáo tiến độ Phase 2 cuối cùng.",
-            "status": "Pending",
+            "taskName": "Xây dựng Lateral movement rule, R&D AI (TN4+TN5+TN6)",
+            "description": "Viết luật phát hiện hành vi dịch chuyển ngang (Lateral movement). Phối hợp với Thái nghiên cứu Prompt và logic cho 2 tính năng AI nâng cao: TN4(Dynamic Playbook), TN5 (NL to Query) và TN6 (AI gap analyst).",
+            "deadline": "25/06/2026",
+            "progress": 100,
+            "note": "Done",
+            "status": "Done",
             "id": 1781101865340,
             "createdAt": "2026-06-10T14:31:00.099Z"
         },
@@ -45,10 +45,70 @@
             "description": "cortex chủ động sử dụng các tool(được gắn API) để tự động thực hiện analyze và respone(SOAR), thehive lấy alert từ wazuh để thực hiện phân tích và quyết định phản ứng",
             "deadline": "25/06/2026",
             "progress": 100,
-            "note": "Chưa tối ưu và kiểm tra",
+            "note": "Done",
             "status": "Done",
             "id": 1782111184180,
             "createdAt": "2026-06-22T06:53:04.180Z"
+        },
+        {
+            "taskName": "Kiểm tra và fix lỗi 3 tính năng AI",
+            "description": "Test và sửa prompt, hỗ trợ Thái fix các lỗi của 3 tính năng AI",
+            "deadline": "07/07/2026",
+            "progress": 0,
+            "note": "Đợi Thái test rồi hỗ trợ",
+            "status": "Pending",
+            "id": 1782300457063,
+            "createdAt": "2026-06-24T11:27:37.063Z"
+        },
+        {
+            "taskName": "Kiểm tra và fix lỗi các decoder và rule custom",
+            "description": "Kiểm tra các decoder có decode được các log thô chưa, kiểm tra rule có bắt được các alret của web và cloud chưa",
+            "deadline": "30/06/2026",
+            "progress": 0,
+            "note": "Đợi Trọng mở web để test",
+            "status": "Pending",
+            "id": 1782300505837,
+            "createdAt": "2026-06-24T11:28:25.837Z"
+        },
+        {
+            "taskName": "Kiểm tra và fix các lỗi của thehive và cortex",
+            "description": "Kiểm tra kết nối và hoạt động của thehive&cortex, đảm bảo thehive bắt được các alert critical và high từ wazuh, cortex tự động thực hiện được các analyze và respone",
+            "deadline": "25/06/2026",
+            "progress": 0,
+            "note": "",
+            "status": "Pending",
+            "id": 1782300570655,
+            "createdAt": "2026-06-24T11:29:30.655Z"
+        },
+        {
+            "taskName": "Dựng cloud openstack bằng docker",
+            "description": "Dùng docker để dựng cloud",
+            "deadline": "26/06/2026",
+            "progress": 0,
+            "note": "",
+            "status": "Pending",
+            "id": 1782303876794,
+            "createdAt": "2026-06-24T12:24:36.794Z"
+        },
+        {
+            "taskName": "Kiểm tra và fix MISP",
+            "description": "Đảm bảo MISP lấy thông tình báo hàng ngày, đảm bảo 3 file MISP.cdb lấy thông tin từ MISP thành công",
+            "deadline": "25/06/2026",
+            "progress": 0,
+            "note": "Kiểm tra luồng API của MISP",
+            "status": "Pending",
+            "id": 1782303952340,
+            "createdAt": "2026-06-24T12:25:52.340Z"
+        },
+        {
+            "taskName": "Đọc tài liệu toàn bộ hệ thống, ghi lại các câu lệnh đã dùng để fix",
+            "description": "Ghi lại lên web, và đọc hiểu toàn bộ kiến thức ở phase 2",
+            "deadline": "25/06/2026",
+            "progress": 0,
+            "note": "",
+            "status": "Pending",
+            "id": 1782308388389,
+            "createdAt": "2026-06-24T13:39:48.389Z"
         }
     ]
 }

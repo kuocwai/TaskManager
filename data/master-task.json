@@ -15,7 +15,7 @@
             "description": "Phát triển các script kết nối Wazuh->TheHive, MISP->CDB Lists, cấu hình kết nối API Cortex <-> TheHive Analyzer. Thiết kế biểu mẫu Ticket và Dashboard Vega/Canvas nâng cao.",
             "deadline": "21/06/2026",
             "progress": 100,
-            "note": "Xong",
+            "note": "Done",
             "status": "Done",
             "id": 1781101867758,
             "createdAt": "2026-06-10T14:31:00.097Z"
@@ -24,19 +24,19 @@
             "taskName": "Thiết kế bộ Rule Engine nâng cao, SOAR Cloud Playbook và Nghiên cứu ML Baseline",
             "description": "Thực hiện Decoder coverage audit, viết Custom Decoder/Rule bắt 4 nhóm lỗi OWASP Web và API OpenStack Control Plane. Phát triển OpenStack SOAR script cô lập Security Group. Cào trích xuất log bình thường ra định dạng CSV/JSON làm baseline cho ML.",
             "deadline": "28/06/2026",
-            "progress": 0,
-            "note": "Nhiệm vụ tổng Tuần 3 - Đổ chất xám phân tích vào hệ thống SIEM/SOAR để nhận diện chính xác các kịch bản tấn công phức tạp.",
-            "status": "Pending",
+            "progress": 80,
+            "note": "Cào trích xuất log sẽ đợi Trọng thao tác trên web để xuất baseline, vẫn chưa làm custom decoder và rule cho cloud",
+            "status": "In Progress",
             "id": 1781101862969,
             "createdAt": "2026-06-10T14:31:00.097Z"
         },
         {
             "taskName": "Diễn tập thực chiến Purple Team, R&D AI nâng cao và Đóng gói bàn giao",
-            "description": "Viết luật Lateral Movement, giả lập tấn công đa hướng trên máy Kali để kiểm thử luồng tự động. Đo lường metric độ trễ phản ứng. R&D Prompt Engineering cho AI TN5+TN6. Đóng gói toàn bộ source code lên GitHub và kết xuất báo cáo.",
+            "description": "Viết luật Lateral Movement. Đo lường metric độ trễ phản ứng. R&D Prompt Engineering cho AI TN5+TN6.",
             "deadline": "08/07/2026",
-            "progress": 0,
-            "note": "Nhiệm vụ tổng Tuần 4 - Nghiệm thu thực tế tính lì đòn của hệ thống dưới kịch bản bắn phá và chuẩn hóa tài liệu minh chứng.",
-            "status": "Pending",
+            "progress": 90,
+            "note": "Chưa đo lường độ trễ metric",
+            "status": "Done",
             "id": 1781101865817,
             "createdAt": "2026-06-10T14:31:00.097Z"
         },
@@ -45,10 +45,30 @@
             "description": "cortex chủ động sử dụng các tool(được gắn API) để tự động thực hiện analyze và respone(SOAR), thehive lấy alert từ wazuh để thực hiện phân tích và quyết định phản ứng",
             "deadline": "22/06/2026",
             "progress": 100,
-            "note": "Chưa setup kết nối giữa thehive và wazuh",
+            "note": "Done",
             "status": "Done",
             "id": 1782111237196,
             "createdAt": "2026-06-22T06:53:57.196Z"
+        },
+        {
+            "taskName": "Thực hiện pentest toàn diện để kiểm tra toàn bộ hệ thống và ghi chú lại lỗi cần fix",
+            "description": "Chỉ cần thực hiện pentest và làm báo cáo những bug",
+            "deadline": "25/06/2026",
+            "progress": 0,
+            "note": "",
+            "status": "Pending",
+            "id": 1782308220545,
+            "createdAt": "2026-06-24T13:37:00.545Z"
+        },
+        {
+            "taskName": "Fix các lỗi sau đợt pentest",
+            "description": "Fix những lỗi trong ghi chú của task pentest",
+            "deadline": "30/06/2026",
+            "progress": 0,
+            "note": "",
+            "status": "Pending",
+            "id": 1782308279414,
+            "createdAt": "2026-06-24T13:37:59.414Z"
         }
     ]
 }

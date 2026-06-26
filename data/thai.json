@@ -23,8 +23,8 @@
         {
             "taskName": "Nghiên cứu Prompt AI nâng cao (TN5 + TN6) & Đóng gói Git Repo",
             "description": "Phối hợp với Khoa thiết kế, thử nghiệm và tối ưu hóa tệp Prompt Engineering cho tính năng dịch ngôn ngữ tự nhiên sang câu lệnh SIEM (NL to Query) và tự sinh Playbook xử lý. Tiến hành tái cấu trúc, làm sạch mã nguồn và đồng bộ lên GitHub.",
-            "deadline": "08/07/2026",
-            "progress": 0,
+            "deadline": "28/07/2026",
+            "progress": 50,
             "note": "Tuần 4 - Đóng gói toàn bộ sản phẩm code tự phát triển. Viết tài liệu ghi chú kỹ thuật phân tích cho module AI.",
             "status": "In Progress",
             "id": 1781101860521,
@@ -33,7 +33,7 @@
         {
             "taskName": "Triển khai tính năng GeoIP Enrichment (Làm giàu dữ liệu địa lý)",
             "description": "Nạp cơ sở dữ liệu MaxMind GeoLite2 vào Wazuh Indexer, thiết lập Ingest Pipeline tự động phân giải tọa độ từ IP và tạo biểu đồ Coordinate Map trên Dashboard.",
-            "deadline": "24/06/2026",
+            "deadline": "30/06/2026",
             "progress": 0,
             "note": "",
             "status": "Pending",
